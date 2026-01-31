@@ -1,6 +1,6 @@
 {
 	"name": "visualproductions-timecore",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"main": "dist/main.js",
 	"scripts": {
 		"postinstall": "husky",
@@ -13,12 +13,12 @@
 		"lint": "run lint:raw ."
 	},
 	"license": "MIT",
-	"dependencies": {
-		"@companion-module/base": "~1.13.6"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/bitfocus/companion-module-visualproductions-timecore.git"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.13.6"
 	},
 	"devDependencies": {
 		"@companion-module/tools": "^2.6.1",
