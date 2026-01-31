@@ -6,7 +6,7 @@ import { configFields } from './config.js'
 
 import * as net from 'net';
 
-class WebsocketInstance extends InstanceBase {
+class TimecoreInstance extends InstanceBase {
 
 	timecodeRegex = "/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]:[0-5][0-9]$/";
 
@@ -21,8 +21,8 @@ class WebsocketInstance extends InstanceBase {
 	}
 
 	checkConfig() {
-		if(this.config.targetIp !== "") {
-			if(this.client != null) {
+		if (this.config.targetIp !== "") {
+			if (this.client != null) {
 				this.client.end();
 				this.client = null;
 			}
@@ -42,7 +42,7 @@ class WebsocketInstance extends InstanceBase {
 
 	async destroy() {
 		this.isInitialized = false
-		if(this.client != null) {
+		if (this.client != null) {
 			this.client.end();
 		}
 	}
@@ -53,7 +53,7 @@ class WebsocketInstance extends InstanceBase {
 	}
 
 	sendMessage(message) {
-		if(this.client != null) {
+		if (this.client != null) {
 			this.client.write(message);
 		}
 	}
@@ -71,4 +71,4 @@ class WebsocketInstance extends InstanceBase {
 	}
 }
 
-runEntrypoint(WebsocketInstance, upgradeScripts)
+runEntrypoint(TimecoreInstance, upgradeScripts)

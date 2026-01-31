@@ -1,24 +1,27 @@
 {
 	"name": "visualproductions-timecore",
 	"version": "1.0.0",
-	"main": "index.js",
-	"type": "module",
+	"main": "dist/main.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"format": "prettier -w ."
+		"format": "prettier -w .",
+		"build": "rimraf dist && tsc",
+		"dev": "yarn build --watch"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@companion-module/base": "~1.5.0",
-		"got": "^13.0.0",
-		"net": "^1.0.2"
+		"@companion-module/base": "~1.13.0",
+		"got": "^13.0.0"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/bitfocus/companion-module-visualproductions-timecore.git"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^1.5.2"
+		"@companion-module/tools": "^2.6.1",
+		"@types/node": "^22.10.10",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.7.3"
 	},
-	"prettier": "@companion-module/tools/.prettierrc.json"
+	"prettier": "@companion-module/tools/.prettierrc.json",
+	"packageManager": "yarn@4.12.0"
 }
