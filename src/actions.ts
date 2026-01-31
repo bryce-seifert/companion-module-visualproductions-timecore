@@ -1,5 +1,5 @@
 import { CompanionActionDefinition } from '@companion-module/base'
-import { TimecoreInstance } from './main'
+import { TimecoreInstance } from './main.js'
 
 export function setupActions(instance: TimecoreInstance): void {
 	const actions: { [id: string]: CompanionActionDefinition } = {

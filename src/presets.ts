@@ -7,11 +7,10 @@ export function setupPresets(instance: TimecoreInstance): void {
 	const Color = {
 		black: 0x000000,
 		white: 0xffffff,
-		darkGray: 0x242424,
-		lightGray: 0x6e6e6e,
 		red: 0xda2f21,
 		green: 0x009900,
 	}
+
 	const controlActions = [
 		{ id: 'start', label: 'Start' },
 		{ id: 'stop', label: 'Stop' },
