@@ -81,30 +81,30 @@ export function setupPresets(instance: TimecoreInstance): void {
 				feedbacks: [],
 			}
 		}
-		presets[`blink`] = {
-			type: 'button',
-			category: 'Utility',
-			name: 'Blink',
-			options: {},
-			style: {
-				text: 'Blink',
-				size: '14',
-				color: Color.white,
-				bgcolor: Color.black,
+	}
+	presets[`blink`] = {
+		type: 'button',
+		category: 'Utility',
+		name: 'Blink',
+		options: {},
+		style: {
+			text: 'Blink',
+			size: '14',
+			color: Color.white,
+			bgcolor: Color.black,
+		},
+		steps: [
+			{
+				down: [
+					{
+						actionId: 'coreBlink',
+						options: {},
+					},
+				],
+				up: [],
 			},
-			steps: [
-				{
-					down: [
-						{
-							actionId: 'coreBlink',
-							options: {},
-						},
-					],
-					up: [],
-				},
-			],
-			feedbacks: [],
-		}
+		],
+		feedbacks: [],
 	}
 	instance.setPresetDefinitions(presets)
 }
