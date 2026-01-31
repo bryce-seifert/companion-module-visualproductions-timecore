@@ -2,6 +2,7 @@ import { InstanceBase, runEntrypoint, InstanceStatus, SomeCompanionConfigField }
 import { upgradeScripts } from './upgrade'
 import { setupActions } from './actions'
 import { setupFeedbacks } from './feedbacks'
+import { setupPresets } from './presets'
 import { configFields, ModuleConfig } from './config'
 import * as net from 'net'
 
@@ -17,6 +18,7 @@ export class TimecoreInstance extends InstanceBase<ModuleConfig> {
 
 		this.initActions()
 		this.initFeedbacks()
+		this.initPresets()
 	}
 
 	checkConfig(): void {
@@ -65,6 +67,10 @@ export class TimecoreInstance extends InstanceBase<ModuleConfig> {
 
 	initActions(): void {
 		setupActions(this)
+	}
+
+	initPresets(): void {
+		setupPresets(this)
 	}
 }
 

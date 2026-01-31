@@ -21,10 +21,6 @@
 		"entrypoint": "../dist/main.js"
 	},
 	"manufacturer": "Visual Productions",
-	"products": [
-		"Timecore"
-	],
-	"keywords": [
-		"Timecore"
-	]
+	"products": ["Timecore"],
+	"keywords": ["Timecore"]
 }

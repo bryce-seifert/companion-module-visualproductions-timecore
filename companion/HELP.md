@@ -1,6 +1,6 @@
 ## Visual Productions TimeCore
 
-This module enables Companion to control the TimeCore device. 
+This module enables Companion to control the TimeCore device.
 
 ### Setup
 
